@@ -51,7 +51,9 @@ function Main(){
         const cowCount=(guessArray, actualArray)=>{
             let count=0;
             for(let i=0;i<3;i++){
-                if(guessArray[i]===actualArray[i]) count++; 
+                if(guessArray[i]===actualArray[i]){
+                    count++;
+                    delete actualArray[i];}
             }
             return count;
         }
