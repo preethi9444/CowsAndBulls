@@ -59,7 +59,7 @@ function Main(){
         }
         const bullCount=(guessArray,actualArray)=>{
             let count=0;
-            for(let i=0;i<3;i++){
+            for(let i=0;i<actualArray.length;i++){
                 if((actualArray.includes(guessArray[i]) && (actualArray[i]!==guessArray[i]))) count++;
             }
             return count;            
