@@ -48,21 +48,31 @@ function Main(){
     else{
         const guessArray=MakeArray(guess);
         const actualArray=MakeArray(actual);
-        const cowCount=(guessArray, actualArray)=>{
+        function cowCount(guessArray, actualArray){
             let count=0;
-            for(let i=0;i<3;i++){
+            let cowIndices=[];
+            for(let i=0;i<guessArray.length;i++){
                 if(guessArray[i]===actualArray[i]){
                     count++;
-                    actualArray.splice(i,1);
-                    guessArray.splice(i,1);
+                    cowIndices.push[i];
                 }
             }
+            for(let i=cowIndices.length-1;i>=1;i--){
+                guessArray.splice(cowIndices[i],1);
+                actualArray.splice(cowIndices[i],1);
+                
+            }
+            
             return count;
         }
-        const bullCount=(guessArray,actualArray)=>{
+        function bullCount(guessArray,actualArray){
             let count=0;
             for(let i=0;i<actualArray.length;i++){
-                if((actualArray.includes(guessArray[i]) && (actualArray[i]!==guessArray[i]))) count++;
+                let m=actualArray.indexOf(guessArray[i]);
+                if(i!==-1){
+                    count++;
+                    actualArray.splice(m,1);
+                }
             }
             return count;            
         }
