@@ -54,10 +54,10 @@ function Main(){
             for(let i=0;i<guessArray.length;i++){
                 if(guessArray[i]===actualArray[i]){
                     count++;
-                    cowIndices.push[i];
+                    cowIndices.push(i);
                 }
             }
-            for(let i=cowIndices.length-1;i>=1;i--){
+            for(let i=cowIndices.length-1;i>=0;i--){
                 guessArray.splice(cowIndices[i],1);
                 actualArray.splice(cowIndices[i],1);
                 
@@ -69,7 +69,7 @@ function Main(){
             let count=0;
             for(let i=0;i<actualArray.length;i++){
                 let m=actualArray.indexOf(guessArray[i]);
-                if(i!==-1){
+                if(m!==-1){
                     count++;
                     actualArray.splice(m,1);
                 }
