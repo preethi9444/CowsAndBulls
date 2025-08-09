@@ -53,7 +53,9 @@ function Main(){
             for(let i=0;i<3;i++){
                 if(guessArray[i]===actualArray[i]){
                     count++;
-                    delete actualArray[i];}
+                    delete actualArray[i];
+                    delete guessArray[i];
+                }
             }
             return count;
         }
