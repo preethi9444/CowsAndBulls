@@ -67,7 +67,7 @@ function Main(){
         }
         function bullCount(guessArray,actualArray){
             let count=0;
-            for(let i=0;i<actualArray.length;i++){
+            for(let i=0;i<guessArray.length;i++){
                 let m=actualArray.indexOf(guessArray[i]);
                 if(m!==-1){
                     count++;
